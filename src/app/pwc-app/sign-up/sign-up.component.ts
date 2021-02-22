@@ -5,25 +5,31 @@ import { Component, OnInit } from '@angular/core';
   template: `
   <form #formdata="ngForm" (ngSubmit)="saveTempDetails(formdata.value)">
 
-  <app-input [label]="'Enter your name'" [type]="'string'"  [placeholder]="'Enter Your name'" ></app-input>
+  <app-input [label]="'Enter your name'" [typeValue]="'string'"  [placeholder]="'Enter Your name'"  [nameAttribute]="'userName'" ></app-input>
   <br><br> <br>
-  <app-input [label]="'Enter your password'" [type]="'password'" [placeholder]="'Enter Your  password'"></app-input>
+  <app-input [label]="'Enter your password'" [typeValue]="'password'" [placeholder]="'Enter Your  password'" [nameAttribute]="'password'" ></app-input>
   <br>
-<button type="submit">submit</button>
+  
+  <app-button [buttonlabel]="'Login form'" (newItemEvent)="buttonClick($event)"></app-button>
   </form>
   `,
   styleUrls: ['./sign-up.component.css']
 })
 export class SignUpComponent implements OnInit {
 
-  username:string;
+ 
+
   constructor() { }
   
 
   ngOnInit() {
   }
   saveTempDetails(data){
-    console.log(data);
+    console.log(data.password);
+  }
+  buttonClick(e)
+  {
+    console.log(e);
   }
 
 }

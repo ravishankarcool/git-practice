@@ -24,8 +24,6 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@ag-grid-community/all-modules/dist/styles/ag-grid.scss",
-              "./node_modules/@ag-grid-community/all-modules/dist/styles/ag-theme-balham/sass/ag-theme-balham.scss",
               "src/styles.css"
             ],
             "scripts": []
@@ -86,10 +84,7 @@
               "src/assets"
             ],
             "styles": [
-              
-               "./node_modules/@ag-grid-community/all-modules/dist/styles/ag-grid.scss",
-               "./node_modules/@ag-grid-community/all-modules/dist/styles/ag-theme-balham/sass/ag-theme-balham.scss",
-              "src/styles.css"
+            "src/styles.css"
             ],
             "scripts": []
           }

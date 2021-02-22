@@ -2,7 +2,7 @@ import { Component, Input, OnInit, Output, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-input',
-  template: '{{label}} : <input [type]="type" [placeholder]="placeholder" [(ngModel)]="data" name="data" (keyup.enter)="inputValue()">',
+  template: '{{label}} : <input [type]="typeValue" [placeholder]="placeholder" [name] ="nameAttribute">',
   styleUrls: ['./input.component.css']
 })
 export class InputComponent implements OnInit {
@@ -11,9 +11,9 @@ export class InputComponent implements OnInit {
    
   data:string;
   @Input() label:string;
-  @Input() type:string;
+  @Input() typeValue:string;
   @Input() placeholder:string;
-  
+  @Input() nameAttribute:string;
  
   ngOnInit() {
   }
